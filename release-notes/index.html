@@ -1,0 +1,1308 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://helm.pingidentity.com/release-notes/">
+      
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Release Notes - Ping Identity DevOps Helm Charts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../mkdocs/overrides/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#release-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://helm.pingidentity.com/" title="Ping Identity DevOps Helm Charts" class="md-header-nav__button md-logo" aria-label="Ping Identity DevOps Helm Charts">
+      <!-- Logo -->
+
+  
+
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Ping Identity DevOps Helm Charts
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/pingidentity/helm-charts" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pingidentity/helm-charts
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Welcome
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../config/" class="md-tabs__link">
+        Value Configs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../examples/" class="md-tabs__link">
+        Examples
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://helm.pingidentity.com/" title="Ping Identity DevOps Helm Charts" class="md-nav__button md-logo" aria-label="Ping Identity DevOps Helm Charts">
+      <!-- Logo -->
+
+  
+
+
+    </a>
+    Ping Identity DevOps Helm Charts
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/pingidentity/helm-charts" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pingidentity/helm-charts
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      
+      <label class="md-nav__link" for="nav-1">
+        Welcome
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Welcome" data-md-level="1">
+        <label class="md-nav__title" for="nav-1">
+          <span class="md-nav__icon md-icon"></span>
+          Welcome
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Release Notes
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-042" class="md-nav__link">
+    Release 0.4.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-042_1" class="md-nav__link">
+    Release 0.4.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-041" class="md-nav__link">
+    Release 0.4.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-040" class="md-nav__link">
+    Release 0.4.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-039" class="md-nav__link">
+    Release 0.3.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-038" class="md-nav__link">
+    Release 0.3.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-037" class="md-nav__link">
+    Release 0.3.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-036" class="md-nav__link">
+    Release 0.3.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-035" class="md-nav__link">
+    Release 0.3.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-034" class="md-nav__link">
+    Release 0.3.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-033" class="md-nav__link">
+    Release 0.3.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-032" class="md-nav__link">
+    Release 0.3.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-031" class="md-nav__link">
+    Release 0.3.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-030" class="md-nav__link">
+    Release 0.3.0
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Value Configs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Value Configs" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Value Configs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/global/" class="md-nav__link">
+        global
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/container/" class="md-nav__link">
+        Container
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/external-image/" class="md-nav__link">
+        External Image
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/image/" class="md-nav__link">
+        Image
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/ingress/" class="md-nav__link">
+        Ingress
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/probes/" class="md-nav__link">
+        Probes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/private-cert/" class="md-nav__link">
+        PrivateCerts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/service/" class="md-nav__link">
+        Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/vault/" class="md-nav__link">
+        Vault
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/workload/" class="md-nav__link">
+        Workload
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-042" class="md-nav__link">
+    Release 0.4.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-042_1" class="md-nav__link">
+    Release 0.4.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-041" class="md-nav__link">
+    Release 0.4.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-040" class="md-nav__link">
+    Release 0.4.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-039" class="md-nav__link">
+    Release 0.3.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-038" class="md-nav__link">
+    Release 0.3.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-037" class="md-nav__link">
+    Release 0.3.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-036" class="md-nav__link">
+    Release 0.3.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-035" class="md-nav__link">
+    Release 0.3.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-034" class="md-nav__link">
+    Release 0.3.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-033" class="md-nav__link">
+    Release 0.3.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-032" class="md-nav__link">
+    Release 0.3.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-031" class="md-nav__link">
+    Release 0.3.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-030" class="md-nav__link">
+    Release 0.3.0
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link"> ¶</a></h1>
+<h2 id="release-042">Release 0.4.2<a class="headerlink" href="#release-042" title="Permanent link"> ¶</a></h2>
+<ul>
+<li><a href="https://github.com/pingidentity/helm-charts/issues/83">Issue #83</a> - Remove old pingdirectory tag check when creating service-cluster.
+  This caused issues when creating a pingdirectory deployment with most recent tags (tags other than edge or 2012).</li>
+</ul>
+<h2 id="release-042_1">Release 0.4.2<a class="headerlink" href="#release-042_1" title="Permanent link"> ¶</a></h2>
+<ul>
+<li><a href="https://github.com/pingidentity/helm-charts/issues/79">Issue #79</a> - Adding support for product PingDataGovernance PAP</li>
+<li>
+<p><a href="https://github.com/pingidentity/helm-charts/issues/78">Issue #78</a> - Adding support to provide affinity definition to the workload of a product.</p>
+<div class="admonition note">
+<p class="admonition-title">Example values.yaml to add podAntiAffinity to pingdirectory</p>
+<div class="highlight"><pre><span></span><code><span class="nt">pingdirectory</span><span class="p">:</span>
+  <span class="nt">container</span><span class="p">:</span>
+    <span class="nt">affinity</span><span class="p">:</span>
+      <span class="nt">podAntiAffinity</span><span class="p">:</span>
+        <span class="c1"># Add a hard requirement for each PD pod to be deployed to a different node</span>
+        <span class="nt">requiredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">labelSelector</span><span class="p">:</span>
+            <span class="nt">matchExpressions</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+              <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">In</span>
+              <span class="nt">values</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pingdirectory</span>
+          <span class="nt">topologyKey</span><span class="p">:</span> <span class="s">&quot;kubernetes.io/hostname&quot;</span>
+        <span class="c1"># Add a soft requirement for each PD pod to be deployed to a different AZ</span>
+        <span class="nt">preferredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+          <span class="nt">podAffinityTerm</span><span class="p">:</span>
+            <span class="nt">labelSelector</span><span class="p">:</span>
+              <span class="nt">matchExpressions</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">app.kubernetes.io/name</span>
+                <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">In</span>
+                <span class="nt">values</span><span class="p">:</span>
+                <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pingdirectory</span>
+            <span class="nt">topologyKey</span><span class="p">:</span> <span class="s">&quot;failure-domain.beta.kubernetes.io/zone&quot;</span>
+</code></pre></div>
+</div>
+</li>
+</ul>
+<h2 id="release-041">Release 0.4.1<a class="headerlink" href="#release-041" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>Change default image tag to <code>2101</code> (January 2021).</li>
+<li>
+<p>Create private certs and keystore for use by images, only if the value
+  <code>{product-name}.privateCert.generate=true</code>.  Defaults are false.</p>
+<ul>
+<li>Helm will generate the a <code>tls.crt</code> and <code>tls.key</code>, place it into a kubernetes
+  secret called <code>{release-productname}-private-cert</code>.</li>
+<li>Mount the secret into the image under <code>/run/secrets/private-cert</code></li>
+<li>An init container will pull the <code>tls.crt</code> and <code>tls.key</code> into a pkcs12
+  keystore and place it into a file <code>/run/secrets/private-keystore/keystore.env</code>
+  that will be mounted into the running container.</li>
+<li>When the container's hooks are running, it will source the environment variables
+  in this <code>keystore.env</code>.  The default variables set are:<ul>
+<li><code>PRIVATE_KEYSTORE_PIN={base64 random pin}</code></li>
+<li><code>PRIVATE_KEYSTORE_TYPE=pkcs12</code></li>
+<li><code>PRIVATE_KEYSTORE={pkcs12 keystore}</code></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">yaml to generate a private cert/keystore for pingaccess-admin</p>
+<div class="highlight"><pre><span></span><code><span class="nt">pingaccess-admin</span><span class="p">:</span>
+  <span class="nt">privateCert</span><span class="p">:</span>
+    <span class="nt">generate</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Example of created /run/secrets/private-keystore/keystore.env</p>
+<div class="highlight"><pre><span></span><code><span class="na">PRIVATE_KEYSTORE_PIN</span><span class="o">=</span><span class="s">nrZmV4XdfK....</span>
+<span class="na">PRIVATE_KEYSTORE_TYPE</span><span class="o">=</span><span class="s">pkcs12</span>
+<span class="na">PRIVATE_KEYSTORE</span><span class="o">=</span><span class="s">MIIJgQIBAzCCCUcGC....</span>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p>Added support for PingAccess clustering between pingaccess-admin and multiple
+  pingaccess-engine containers.</p>
+<ul>
+<li>See <a href="../examples/everything.yaml">everything.yaml</a> for example of deploying
+    a PingAccess cluster using PingFederate/PingDirectory to authenticate</li>
+<li>It is <em>required</em> to either:<ul>
+<li>generate the private cert (see above)
+    with the value of <code>pingaccess-admin.privateCert.generate=true</code> or</li>
+<li>provide your own cert secret called <code>{release-productname}-private-cert</code>
+    containing a valid <code>tls.crt</code> and <code>tls.key</code>.</li>
+</ul>
+</li>
+<li>Enable both the <code>pingaccess-admin</code> and <code>pingaccess-engine</code> helm chart products</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Example values to create a clustered pingaccess</p>
+<div class="highlight"><pre><span></span><code><span class="nt">pingaccess-admin</span><span class="p">:</span>
+  <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">privateCert</span><span class="p">:</span>
+    <span class="nt">generate</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">envs</span><span class="p">:</span>
+    <span class="nt">SERVER_PROFILE_URL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/pingidentity/pingidentity-server-profiles.git</span>
+    <span class="nt">SERVER_PROFILE_PATH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">baseline/pingaccess</span>
+
+<span class="nt">pingaccess-engine</span><span class="p">:</span>
+  <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">envs</span><span class="p">:</span>
+    <span class="nt">SERVER_PROFILE_URL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/pingidentity/pingidentity-server-profiles.git</span>
+    <span class="nt">SERVER_PROFILE_PATH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">baseline/pingaccess</span>
+
+<span class="nt">pingfederate-admin</span><span class="p">:</span>
+  <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">envs</span><span class="p">:</span>
+    <span class="nt">SERVER_PROFILE_URL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/pingidentity/pingidentity-server-profiles.git</span>
+    <span class="nt">SERVER_PROFILE_PATH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">baseline/pingfederate</span>
+  <span class="nt">container</span><span class="p">:</span>
+    <span class="nt">waitFor</span><span class="p">:</span>
+      <span class="nt">pingdirectory</span><span class="p">:</span>
+        <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ldaps</span>
+
+<span class="nt">pingfederate-engine</span><span class="p">:</span>
+  <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">envs</span><span class="p">:</span>
+    <span class="nt">SERVER_PROFILE_URL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/pingidentity/pingidentity-server-profiles.git</span>
+    <span class="nt">SERVER_PROFILE_PATH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">baseline/pingfederate</span>
+
+<span class="nt">pingdirectory</span><span class="p">:</span>
+  <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">envs</span><span class="p">:</span>
+    <span class="nt">SERVER_PROFILE_URL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/pingidentity/pingidentity-server-profiles.git</span>
+    <span class="nt">SERVER_PROFILE_PATH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">baseline/pingdirectory</span>
+</code></pre></div>
+</div>
+</li>
+</ul>
+<h2 id="release-040">Release 0.4.0<a class="headerlink" href="#release-040" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>
+<p>Support availability of PingDirectory pods through the cluster headless kubernetes service.
+  Allows for PingDirectory nodes to find one another during the replication enable/init process.</p>
+<div class="admonition note">
+<p class="admonition-title">Adds following to pingdirectory-cluster</p>
+<div class="highlight"><pre><span></span><code><span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">annotations</span><span class="p">:</span>
+    <span class="nt">service.alpha.kubernetes.io/tolerate-unready-endpoints</span><span class="p">:</span> <span class="s">&quot;true&quot;</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">publishNotReadyAddresses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+</div>
+</li>
+</ul>
+<h2 id="release-039">Release 0.3.9<a class="headerlink" href="#release-039" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>Fixed the default wait-for service name on pingfederate-engine (admin --&gt; https).</li>
+<li>Changed default on readiness command to check for readiness every 5 seconds rather than 30.
+  This allows for availability on some services, such as PingFederate which is normally ready in 30 sec.</li>
+</ul>
+<h2 id="release-038">Release 0.3.8<a class="headerlink" href="#release-038" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>
+<p><a href="https://github.com/pingidentity/helm-charts/issues/56">Issue #56</a> - Improved Default Naming on Global vars - PORTs</p>
+</li>
+<li>
+<p><a href="https://github.com/pingidentity/helm-charts/issues/56">Issue #56</a> - Improved Default Naming on Global vars - PORTs</p>
+<p>In release 0.3.6, global-env-vars were created for PORTS.  The naming structure used was
+complex and difficult, primarily because a product can have several ports open on a particular
+private and public host.  The format will be more consistent as defined by the following:</p>
+<p><code>{product-short-code with type}_{public or private}_{hostname or port}{_service if port}</code></p>
+<p>An example with PD might look like (note the service names of <code>https</code> and <code>data-api</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">PD_ENGINE_PUBLIC_PORT_HTTPS</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">443</span>
+<span class="nt">PD_ENGINE_PUBLIC_PORT_DATA_API</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1443</span>
+
+<span class="nt">PD_ENGINE_PRIVATE_PORT_HTTPS</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">443</span>
+<span class="nt">PD_ENGINE_PRIVATE_PORT_DATA_API</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8443</span>
+</code></pre></div>
+</li>
+<li>
+<p><a href="https://github.com/pingidentity/helm-charts/issues/62">Issue #62</a> -
+  When creating configMapRef's, take into account the proper release name to include</p>
+<p>ConfigMapRef names in workloads were not consistent with the ConfigMaps created by default
+when taking into account the <code>addReleaseNameToResource</code> setting of prepend, append or none.
+This fixes that issue ensuring that config maps are consistent.</p>
+</li>
+<li>
+<p>Added global-env private/public host/port for PingDataConsole, which was missing.</p>
+</li>
+<li>Changed the default pingfederate-admin <code>admin</code> service name to <code>https</code> to reduce confusion.</li>
+<li>Changed the default pingfederate-engine <code>engine</code> service name to <code>https</code> to reduce confusion.</li>
+</ul>
+<h2 id="release-037">Release 0.3.7<a class="headerlink" href="#release-037" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>Fixes issue with service -vs- ingress name on creation of ingress to service mapping.  Resolves issue #57.</li>
+</ul>
+<h2 id="release-036">Release 0.3.6<a class="headerlink" href="#release-036" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>
+<p>Cleaning up and making services/ingresses easier to use together.  Incorporating all the ports
+  used in both a service and ingress into the same location of the <a href="../config/service/">services structure</a>.</p>
+<p>The example below shows a container/service/ingress and how to specify the ports at each
+level.</p>
+<ul>
+<li><code>containerPort</code> - Replaces <code>targetPort</code></li>
+<li><code>servicePort</code> - Replaces <code>port</code></li>
+<li><code>ingressPort</code> - New entry</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="nt">services</span><span class="p">:</span>
+    <span class="nt">api</span><span class="p">:</span>
+      <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8443 &lt;--- changed from targetPort</span>
+      <span class="nt">servicePort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1443   &lt;--- changed from port</span>
+      <span class="nt">ingressPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">443    &lt;--- new.  moved from ingress</span>
+      <span class="nt">dataService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">data-api</span><span class="p">:</span>
+      <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">9443 &lt;--- changed from targetPort</span>
+      <span class="nt">servicePort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2443   &lt;--- changed from port</span>
+      <span class="nt">ingressPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2443   &lt;--- new.  moved from ingress</span>
+      <span class="nt">dataService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">ingress</span><span class="p">:</span>
+    <span class="nt">hosts</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pingdirectory.example.com</span>
+        <span class="nt">paths</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api</span>
+          <span class="nt">backend</span><span class="p">:</span>
+            <span class="nt">serviceName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">api        &lt;--- changed from servicePort</span>
+        <span class="p p-Indicator">-</span> <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/directory/v1</span>
+          <span class="nt">backend</span><span class="p">:</span>
+            <span class="nt">serviceName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">data-api   &lt;--- changed from servicePort</span>
+</code></pre></div>
+<p>Additionally, <code>global-env-vars</code> will be created for each of these ports.  If the name
+of the product is <code>PROD</code>, the the following ports would be created:</p>
+<div class="highlight"><pre><span></span><code><span class="na">  PROD_API_PRIVATE_PORT</span><span class="o">=</span><span class="s">&quot;1443&quot;          # This is the servicePort</span>
+<span class="na">  PROD_API_PUBLIC_PORT</span><span class="o">=</span><span class="s">&quot;443&quot;            # This is the ingressPort</span>
+<span class="na">  PROD_DATA_API_PRIVATE_PORT</span><span class="o">=</span><span class="s">&quot;2443&quot;</span>
+<span class="na">  PROD_DATA_API_PUBLIC_PORT</span><span class="o">=</span><span class="s">&quot;2443&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Fixed missing <code>USER_BASE_DN</code> setting in simple-sync.yaml example.</p>
+</li>
+</ul>
+<h2 id="release-035">Release 0.3.5<a class="headerlink" href="#release-035" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>
+<p>Allowing config values to determine use of init containers to wait-for other chart products.
+  For each product, you can now provide a <code>waitFor</code> structure providing the name
+  and service that should be waited on before the running container con continue.  This
+  will basically inject an initContainer using the PingToolkit wait-for utility until it
+  can <code>nc host:port</code> before continuing.</p>
+<div class="admonition example">
+<p class="admonition-title">PingFederate Admin waiting on pingdirectory ldaps service to be available</p>
+<div class="highlight"><pre><span></span><code><span class="nt">pingfederate-admin</span><span class="p">:</span>
+  <span class="nt">container</span><span class="p">:</span>
+    <span class="nt">waitFor</span><span class="p">:</span>
+      <span class="nt">pingdirectory</span><span class="p">:</span>
+        <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ldaps</span>
+      <span class="nt">pingdatagovernance</span><span class="p">:</span>
+        <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https</span>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p>By default, the <code>pingfederate-engine</code> will waitFor <code>pingfederate-admin</code> before it
+  starts.</p>
+</li>
+</ul>
+<h2 id="release-034">Release 0.3.4<a class="headerlink" href="#release-034" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>Adding init container to PingFederate Admin to wait-for PingDirectory's LDAPs
+  port if the pingdirectory.enabled=true.  This fixes an issue that keeps
+  PingFederate Admin from starting when it's dependent on PingDirectory.  In
+  the case that PingFederate isn't dependent on PingDirectory and it is still
+  enabled, it will simply delay the start time of PingFederate admin.  A future
+  version will allow for specifying a list of services to wait-for so this can
+  be turned off/on by deployer.</li>
+<li>Moved the securityContext settings added to release 0.3.3 from the container
+  to the workload, as that is the proper place to use them.  Required for use of
+  <code>fsGroup</code> setting.</li>
+</ul>
+<h2 id="release-033">Release 0.3.3<a class="headerlink" href="#release-033" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>Adding the ability for a deployer to add a securityContext to the containers.
+  Currently, there are warning messages in the images when an outside-in pattern is
+  used (i.e. securityContext is set). Also, many of the default ports require privileged
+  access, so care should be taken along with testing to ensure the containers start up
+  fine. Additional, one should not change the security context when doing and upgrade
+  or using a PCV from a previous deployment.</li>
+</ul>
+<p>An example securityContext that can be used might look like:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+  <span class="nt">container</span><span class="p">:</span>
+    <span class="nt">securityContext</span><span class="p">:</span>
+      <span class="nt">allowPrivilegeEscalation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+      <span class="nt">capabilities</span><span class="p">:</span>
+        <span class="nt">drop</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ALL</span>
+      <span class="nt">runAsGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+      <span class="nt">runAsNonRoot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">runAsUser</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+</code></pre></div>
+<p>By default, the values.yaml in the chart will set the securityContext to empty:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+  <span class="nt">container</span><span class="p">:</span>
+    <span class="nt">securityContext</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
+</code></pre></div>
+<h2 id="release-032">Release 0.3.2<a class="headerlink" href="#release-032" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>Replaced init container on pingfederate-engine to use pingtoolkit rather than 3rd party
+  curlimage.  Additionally added resource constraints and security context to this init
+  container.</li>
+<li>Remove hardcoded SERVER_PROFILE_BRANCH set to master, relying on git repo default branch</li>
+<li>Cleanup pingdelegator values.  public hostnames for pingfederate and pingdirectory
+  built based off of ingress hostnames, part of <code>{release-name}-global-env-vars</code> configmap.</li>
+<li>
+<p>Remove default nginx annotations of ingress resources.  If an nginx controller is used
+  for ingress, the following ingress annotations should be included:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>By removing the following annotations from the default, use of current config values
+will result in no ingress being set.  You must add these in via your .yaml file or via
+separate --set settings.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+  <span class="nt">ingress</span><span class="p">:</span>
+    <span class="nt">annotations</span><span class="p">:</span>
+      <span class="nt">nginx.ingress.kubernetes.io/backend-protocol</span><span class="p">:</span> <span class="s">&quot;HTTPS&quot;</span>
+      <span class="nt">kubernetes.io/ingress.class</span><span class="p">:</span> <span class="s">&quot;nginx-public&quot;</span>
+</code></pre></div>
+</div>
+</li>
+</ul>
+<h2 id="release-031">Release 0.3.1<a class="headerlink" href="#release-031" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>Add container envFrom for <code>{release-name}-env-vars</code> back as optional.
+  Fixes breaking change from 0.2.8 to 0.2.9 for those that used this configmap.</li>
+<li>Added ability for deployer to add their own envFrom's via their values.yaml.
+  An example (adding an optional configmap/secrets to all products).  Just change
+  global to the name of the product to only have that product use the references.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+  <span class="nt">container</span><span class="p">:</span>
+    <span class="nt">envFrom</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">configMapRef</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-killer-configmap</span>
+        <span class="nt">optional</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="p p-Indicator">-</span> <span class="nt">secretRef</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-killer-secrets</span>
+        <span class="nt">optional</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<h2 id="release-030">Release 0.3.0<a class="headerlink" href="#release-030" title="Permanent link"> ¶</a></h2>
+<ul>
+<li>Consolidate deployment/stateful set templates to a single workload template.</li>
+<li>
+<p>Changes to values.yaml</p>
+<ul>
+<li>Created a workload map under global (see below)</li>
+<li>Moved old deployment information under workload</li>
+<li>Moved old statefulSet information under workload</li>
+<li>Updated <code>pingfederate-admin</code> to reflect new workload</li>
+<li>Updated <code>pingdirectory</code> to reflect new workload</li>
+<li>Allows for any product to be run as a deployment or statefulSet</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using <code>workload.type=StatefulSet</code> will create <code>pvc</code> resources and allow for
+persistence on restarts of containers.  This is helpful during development.  Be aware
+that the <code>pvc</code> resources will need to be deleted to startup a fresh copy of the
+product images.</p>
+<p>```yaml
+global:
+  workload:
+    type: Deployment        # Can be Deployment or StatefulSet (see warning above)</p>
+<div class="codehilite"><pre><span></span><code><span class="n">deployment</span><span class="o">:</span>
+  <span class="n">strategy</span><span class="o">:</span>
+    <span class="n">type</span><span class="o">:</span> <span class="n">RollingUpdate</span> <span class="err">#</span> <span class="n">Can</span> <span class="n">be</span> <span class="n">RollingUpdate</span> <span class="n">or</span> <span class="n">Recreate</span>
+    <span class="n">rollingUpdate</span><span class="o">:</span>
+      <span class="n">maxSurge</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="n">maxUnavailable</span><span class="o">:</span> <span class="mi">0</span>
+
+<span class="n">statefulSet</span><span class="o">:</span>
+  <span class="n">partition</span><span class="o">:</span> <span class="mi">0</span>          <span class="err">#</span> <span class="n">Used</span> <span class="k">for</span> <span class="n">canary</span> <span class="n">testing</span> <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span>
+
+  <span class="n">persistentvolume</span><span class="o">:</span>
+    <span class="n">enabled</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="err">############################################################</span>
+    <span class="err">#</span> <span class="n">For</span> <span class="n">every</span> <span class="n">volume</span> <span class="n">defined</span> <span class="k">in</span> <span class="n">the</span> <span class="n">volumes</span> <span class="n">list</span><span class="o">,</span> <span class="mi">3</span> <span class="n">items</span> <span class="n">will</span> <span class="n">be</span>
+    <span class="err">#</span> <span class="n">created</span> <span class="k">in</span> <span class="n">the</span> <span class="n">StatefulSet</span>
+    <span class="err">#</span>   <span class="mi">1</span><span class="o">.</span> <span class="n">container</span><span class="o">.</span><span class="na">volumeMounts</span> <span class="o">-</span> <span class="n">name</span> <span class="n">and</span> <span class="n">mountPath</span>
+    <span class="err">#</span>   <span class="mi">2</span><span class="o">.</span> <span class="n">template</span><span class="o">.</span><span class="na">spec</span><span class="o">.</span><span class="na">volume</span> <span class="o">-</span> <span class="n">name</span> <span class="n">and</span> <span class="n">persistentVolumeClaim</span><span class="o">.</span><span class="na">claimName</span>
+    <span class="err">#</span>   <span class="mi">3</span><span class="o">.</span> <span class="n">spec</span><span class="o">.</span><span class="na">volumeClaimTemplates</span> <span class="o">-</span> <span class="n">persistentVolumeClaim</span>
+    <span class="err">#</span>
+    <span class="err">#</span> <span class="n">https</span><span class="o">://</span><span class="n">kubernetes</span><span class="o">.</span><span class="na">io</span><span class="sr">/docs/concepts/storage/persistent-volumes/</span>
+    <span class="err">############################################################</span>
+    <span class="n">volumes</span><span class="o">:</span>
+      <span class="n">out</span><span class="o">-</span><span class="n">dir</span><span class="o">:</span>
+        <span class="n">mountPath</span><span class="o">:</span> <span class="sr">/opt/</span><span class="n">out</span>
+        <span class="n">persistentVolumeClaim</span><span class="o">:</span>
+          <span class="n">accessModes</span><span class="o">:</span>
+          <span class="o">-</span> <span class="n">ReadWriteOnce</span>
+          <span class="n">storageClassName</span><span class="o">:</span>
+          <span class="n">resources</span><span class="o">:</span>
+            <span class="n">requests</span><span class="o">:</span>
+              <span class="n">storage</span><span class="o">:</span> <span class="mi">4</span><span class="n">Gi</span>
+</code></pre></div>
+
+</div>
+<p>```</p>
+</li>
+<li>
+<p>Renamed template files in pinglib from .yaml to .tpl</p>
+</li>
+<li>Added <code>terminationGracePeriodSeconds</code> to container to support setting in values</li>
+<li>Added <code>serviceAccountName</code> to vault.hashicorp to specify to the container what service
+  account can be used to authenticate to the Hashicorp Vault Injector</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../getting-started/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../config/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Copyright 2020 Ping Identity
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs', 'instant'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
